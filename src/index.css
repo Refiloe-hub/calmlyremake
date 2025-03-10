@@ -1,0 +1,362 @@
+
+html, body {
+  width: 100%;
+  
+  font-family: Arial, sans-serif;
+  background-color: #e6f7f7;
+  overflow-x: hidden;
+  }
+  
+  
+  
+    .landing-page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      background-color: #e6f7f7;
+      width: 100%;
+      
+     
+    }
+  
+   
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+    }
+  
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-left: -120px;
+  }
+  
+    .logo img {
+      height: 75px; /* Ensures the logo has the same height as navigation links */
+      width: 85px;
+      
+    
+    }
+      
+  
+    .navigation {
+      display: flex;
+      gap: 20px;
+    }
+  
+    .navigation a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      display: flex;
+      font-weight: bold;
+      padding: 10px 15px;
+      align-items: center; /* Vertically centers the text */
+      height: 80px; /* Matches the header height */
+      transition: color 0.3s ease;
+    }
+  
+    .navigation a:hover {
+      color: #333;
+    }
+                .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+       padding: 100px 40px 40px;
+      background-color: #e6f7f7; /* Light teal background */
+        gap: 220px;
+    }
+  
+    .text-content h1 {
+      font-size: 40px;
+      color: #40ADA8; /* Blue text for the main heading */
+    }
+  
+    .text-content h2 {
+      font-size: 24px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+  
+    .text-content p {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+  
+    .cta-button {
+      background-color: #40ADA8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  
+    .cta-button:hover {
+      background-color: #0056b3;
+    }
+  
+    .image-content img {
+      max-width: 100%;
+      height: auto;
+       border-radius: 10px;
+      
+    }
+  
+    .cta-banner {
+      background-color: #40ADA8; /* Blue banner background */
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 20px;
+    }
+    
+    .image-content img {
+      max-width: 500px; /* Adjust the maximum width */
+      max-height: 500px; /* Adjust the maximum height */
+      object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    
+    }
+        /* Features Section */
+    .features-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e6f7f7;
+      color: black;
+    }
+  
+    .features-heading h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+  
+    .features-heading p {
+      font-size: 1.2rem;
+      color: gray;
+      margin-bottom: 30px;
+    }
+  
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+  
+    .feature-card {
+      background-color: #40ADA8;
+      color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+  
+    .feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    .feature-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  
+    .feature-card a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      border-bottom: 2px solid white;
+    }
+  
+    .feature-card a:hover {
+      color: #F5F5F5;
+    }
+  
+    /* Footer */
+    .footer {
+      background-color: #40ADA8;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+       .mental-health-features {
+      text-align: center;
+      padding: 40px 20px;
+       background-color: #e6f7f7;
+      color: black;
+      margin-bottom: 40px; /* Adds spacing below to separate from the next section */
+    }
+  
+    .mental-health-features h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+  
+    }
+  
+    .mental-health-features p {
+      font-size: 1.2rem;
+      color: gray;
+      margin-bottom: 30px;
+    }
+  
+    .mental-health-feature-cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+  
+    .mental-feature-card {
+      background-color: #fff;
+      color: black;
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  
+    .mental-feature-card img {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+  
+    .mental-feature-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+  
+    .mental-feature-card p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+    }
+  
+    .learn-more {
+      background-color: #40ADA8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+  
+    .learn-more:hover {
+      background-color: #0056b3;
+    }
+  
+    /* Add margin-top to features-section to prevent overlap */
+    .features-section {
+      text-align: center;
+      padding: 50px 20px;
+      background-color: #e6f7f7;
+      color: black;
+      margin-top: 40px; /* Ensures separation from the previous section */
+    }
+       .user-testimonials {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e6f7f7;
+  color: black;
+  }
+  
+  .user-testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  }
+  
+  .user-testimonials p {
+  font-size: 1.2rem;
+  color: gray;
+  margin-bottom: 30px;
+  }
+  
+  .testimonial-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  }
+  
+  .testimonial-text p {
+  font-size: 1rem;
+  color: #333;
+  text-align: left;
+  }
+  .wellness-journey {
+  background-color: #e6f7f7; /* Adjust color as per design */
+  padding: 40px 20px;
+  text-align: center;
+  color: black;
+  }
+  
+  .wellness-journey h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  }
+  
+  .wellness-journey p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  }
+  
+  .subscription-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  }
+  
+  .email-input {
+  padding: 10px;
+  border: none;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 1rem;
+  background-color: white;
+  }
+  
+  .subscribe-button {
+  background-color: white;
+  color: #38b2ac;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  }
+  
+  .subscribe-button:hover {
+  background-color: #e2e8f0; /* Light gray on hover */
+  }
+  
+  
+   
+  
