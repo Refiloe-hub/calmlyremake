@@ -12,8 +12,7 @@ const Footer = () => {
         <li><Link to="/aboutus">About Us</Link></li>
         <li><Link to="/wellnesstips">Wellness Tips</Link></li>
         <li><Link to="/privacypolicy">Privacy Policy</Link></li>
-        <li><Link to="/termsconditions">Terms and Conditions</Link></li>
-        
+        <li><Link to="/termsconditions">Terms & Conditions</Link></li>
       </ul>
 
       <style>
@@ -32,7 +31,8 @@ const Footer = () => {
             padding: 0;
             display: flex;
             justify-content: center;
-            gap: 20px;
+            flex-wrap: wrap;
+            gap: 15px;
             margin-top: 10px;
           }
 
@@ -44,10 +44,30 @@ const Footer = () => {
             text-decoration: none;
             color: white;
             font-size: 0.9rem;
+            padding: 5px 10px;
           }
 
           .footer-links a:hover {
             text-decoration: underline;
+          }
+
+          /* Responsive Styling */
+          @media (max-width: 768px) {
+            .footer {
+              padding: 15px;
+              font-size: 0.8rem;
+            }
+
+            .footer-links {
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
+            }
+
+            .footer-links a {
+              font-size: 0.85rem;
+              padding: 8px 0;
+            }
           }
         `}
       </style>
