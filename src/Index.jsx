@@ -1,7 +1,7 @@
 import './index.css';
 import { Link } from "react-router-dom";
 import AIChat from "./AIChat"; 
-import "./i18n"; // Import the i18n configuration
+
 
 const handleLearnMoreClick = () => {
   window.location.href = "/WellnessTips";
