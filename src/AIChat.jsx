@@ -1,12 +1,39 @@
 import { useState, useEffect, useRef } from "react";
-import { FiMinus, FiMaximize, FiX } from "react-icons/fi";
+import { FiMinus, FiMaximize, FiX, FiMic } from "react-icons/fi";
+
 
 const AIChat = () => {
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
+  const [isListening, setIsListening] = useState(false);
   const chatRef = useRef(null);
+  const recognitionRef = useRef(null);
+
+  // Initialize Speech Recognition
+  useEffect(() => {
+    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      recognitionRef.current = new SpeechRecognition();
+      recognitionRef.current.continuous = false;
+      recognitionRef.current.lang = "en-US";
+      recognitionRef.current.onresult = (event) => {
+        const transcript = event.results[0][0].transcript;
+        setInput(transcript);
+        sendMessage(transcript); // Auto-send recognized speech
+      };
+      recognitionRef.current.onend = () => setIsListening(false);
+    }
+  }, []);
+
+  const startListening = () => {
+    if (recognitionRef.current) {
+      setIsListening(true);
+      recognitionRef.current.start();
+    }
+  };
+
 
   // Predefined rules for the chatbot
   const rules = {
@@ -111,15 +138,25 @@ const AIChat = () => {
     return rules.default.response;
   }
 
-  const sendMessage = () => {
-    if (!input.trim()) return;
-
-    const userMessage = { text: input, sender: "user" };
-    const botResponse = getBotResponse(input); // Get bot response
+  const sendMessage = (text = input) => {
+    if (!text.trim()) return;
+    
+    const userMessage = { text, sender: "user" };
+    const botResponse = getBotResponse(text);
     const botMessage = { text: botResponse, sender: "ai" };
 
     setMessages((prevMessages) => [...prevMessages, userMessage, botMessage]);
-    setInput(""); // Clear input field
+    setInput("");
+
+    speakText(botResponse); // AI reads the response aloud
+  };
+   // AI Voice Output (Text-to-Speech)
+   const speakText = (text) => {
+    if ("speechSynthesis" in window) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = "en-US";
+      window.speechSynthesis.speak(utterance);
+    }
   };
 
   // Auto-scroll chatbox to the latest message
@@ -137,11 +174,15 @@ const AIChat = () => {
         </button>
       )}
 
-      {isOpen && (
+{isOpen && (
         <div style={{ ...styles.chatContainer, height: isMinimized ? "40px" : "400px" }}>
           <div style={styles.chatHeader}>
             <span>Iggy</span>
             <div style={styles.controls}>
+              <FiMic 
+                style={{ ...styles.icon, color: isListening ? "red" : "#fff" }}
+                onClick={startListening} 
+              />
               <FiMinus style={styles.icon} onClick={() => setIsMinimized(!isMinimized)} />
               <FiMaximize style={styles.icon} onClick={() => setIsMinimized(false)} />
               <FiX style={styles.icon} onClick={() => setIsOpen(false)} />
@@ -174,9 +215,9 @@ const AIChat = () => {
                 placeholder="Type a message..."
                 style={styles.input}
               />
-              <button onClick={sendMessage} style={styles.sendButton}>
-                Send
-              </button>
+            <button onClick={() => sendMessage(input)} style={styles.sendButton}>
+              Send
+            </button>
             </div>
           )}
         </div>
