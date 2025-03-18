@@ -170,7 +170,7 @@ const AIChat = () => {
     <>
       {!isOpen && (
         <button onClick={() => setIsOpen(true)} style={styles.floatingButton}>
-          Chat
+          Chat with Iggy
         </button>
       )}
 

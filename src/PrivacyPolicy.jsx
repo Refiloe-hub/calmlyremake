@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
 
       <h2>1. Introduction</h2>
       <p>
-        At Calmly, we respect your privacy and are committed to protecting your personal data. 
+        At Be Alive, we respect your privacy and are committed to protecting your personal data. 
         This Privacy Policy explains how we collect, use, and protect your information.
       </p>
 
@@ -30,7 +30,7 @@ const PrivacyPolicy = () => {
 
       <h2>5. Your Rights</h2>
       <p>
-        You have the right to access, modify, or delete your data. To make any requests, contact us at support@calmly.com.
+        You have the right to access, modify, or delete your data. To make any requests, contact us at support@Be Alive.com.
       </p>
 
       <h2>6. Updates to This Policy</h2>
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
         We may update this Privacy Policy periodically. Please check this page for the latest version.
       </p>
 
-      <p>If you have any questions, contact us at support@calmly.com.</p>
+      <p>If you have any questions, contact us at support@Be Alive.com.</p>
 
       <style>
         {`

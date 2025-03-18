@@ -8,7 +8,7 @@ const AboutUs = () => {
         <section className="about-us-section">
           <h2>Who We Are</h2>
           <p>
-            Calmly is a mental health platform designed to support your well-being through AI-powered
+            Be Alive is a mental health platform designed to support your well-being through AI-powered
             solutions. Our mission is to provide accessible, personalized mental health support that
             empowers individuals to lead healthier and more balanced lives.
           </p>
@@ -27,7 +27,7 @@ const AboutUs = () => {
         <section className="our-story">
           <h2>Our Story</h2>
           <p>
-            Founded in 2024, Calmly was created by a team of passionate professionals in the fields of technology,
+            Founded in 2024, Be Alive was created by a team of passionate professionals in the fields of technology,
             psychology, and wellness. We are driven by the belief that mental health support should be accessible to
             everyone, at any time, and from anywhere.
           </p>

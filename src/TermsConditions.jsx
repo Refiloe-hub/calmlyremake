@@ -6,7 +6,7 @@ const TermsConditions = () => {
 
       <h2>1. Introduction</h2>
       <p>
-        Welcome to Calmly! By using our services, you agree to abide by these terms and conditions.
+        Welcome to Be Alive! By using our services, you agree to abide by these terms and conditions.
       </p>
 
       <h2>2. Use of Service</h2>
@@ -33,7 +33,7 @@ const TermsConditions = () => {
 
       <h2>6. Contact Us</h2>
       <p>
-        If you have any questions about these Terms, contact us at support@calmly.com.
+        If you have any questions about these Terms, contact us at support@Be Alive.com.
       </p>
 
       <style>

@@ -8,7 +8,7 @@ const HowItWorks = () => {
       <section className="how-it-works">
         <div className="how-it-works-heading">
           <h2>The Process Overview</h2>
-          <p>Discover how Calmly empowers your mental well-being in 3 simple steps.</p>
+          <p>Discover how Be Alive empowers your mental well-being in 3 simple steps.</p>
         </div>
 
         <div className="steps-grid">

@@ -9,7 +9,7 @@ const Header = () => {
       <div className="header-container">
         {/* Logo */}
         <div className="logo">
-          <img src="/calmly_modified.png" alt="Logo" />
+          <img src="/bealive1-removebg-preview.png" alt="Logo" />
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -60,8 +60,8 @@ const Header = () => {
   }
   
     .logo img {
-      height: 75px; /* Ensures the logo has the same height as navigation links */
-      width: 85px;
+      height: 120px; /* Ensures the logo has the same height as navigation links */
+      width: 120px;
       
     
     }

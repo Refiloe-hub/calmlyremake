@@ -21,7 +21,7 @@ const Index = () => {
               <h2>No 1 for Mental Health</h2>
               <h1>Discover the Serenity with AI Support</h1>
               <p>
-                Enhance your mental well-being with personalized advice from Calmly.
+                Enhance your mental well-being with personalized advice from Be Alive.
               </p>
               <button className="cta-button">
   <Link to="/signup" style={{ textDecoration: "none", color: "white" }}>Sign up today</Link>

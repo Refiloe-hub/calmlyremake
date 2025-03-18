@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <footer className="footer">
-      <p>© {new Date().getFullYear()} Calmly. All rights reserved.</p>
+      <p>© {new Date().getFullYear()} Be Alive. All rights reserved.</p>
 
       <ul className="footer-links">
         <li><Link to="/">Home</Link></li>
